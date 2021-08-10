@@ -1,0 +1,63 @@
+{
+  "name": "dbh_first_electron",
+  "version": "0.0.1",
+  "description": "demo",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "npm start",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dubaohao/dbh_first_electron.git"
+  },
+  "keywords": [
+    "electron"
+  ],
+  "author": "dubaohao24@126.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dubaohao/dbh_first_electron/issues"
+  },
+  "homepage": "https://github.com/dubaohao/dbh_first_electron#readme",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.59",
+    "@electron-forge/maker-deb": "^6.0.0-beta.59",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.59",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.59",
+    "@electron-forge/maker-zip": "^6.0.0-beta.59",
+    "electron": "^13.1.9"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "dbh_first_electron"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}

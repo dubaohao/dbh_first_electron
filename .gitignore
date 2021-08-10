@@ -1,0 +1,12 @@
+# Mac OS
+.DS_Store
+
+# node
+*.log
+log
+node_modules
+
+# build
+.serverless/
+output/
+out/
